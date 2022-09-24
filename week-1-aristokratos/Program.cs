@@ -62,3 +62,83 @@ namespace CGPACalculator
                 scoreFolder.Add(score);
             }
         }
+        public void processStudentDetails()
+        {
+            weightedPoint = 0;
+            grade = 0;
+            for (int i = 0; i < numberOfCourses; i++)
+            {
+                if (scoreFolder[i] >= 70 && scoreFolder[i] <= 100)
+                {
+                    gradeUnitFolder.Add(5);
+                    gradeFolder.Add('A');
+                    point = 5 * courseUnitFolder[i];
+                    weightedPointFolder.Add(point);
+                    weightedPoint += point;
+                    grade += 5;
+                    remarkFolder.Add("Excellent");
+
+
+
+
+                }
+                else if (scoreFolder[i] >= 60 && scoreFolder[i] <= 69)
+                {
+                    gradeUnitFolder.Add(4);
+                    gradeFolder.Add('B');
+                    point = 4 * courseUnitFolder[i];
+                    weightedPointFolder.Add(point);
+                    weightedPoint += point;
+                    grade += 4;
+                    remarkFolder.Add("Very Good");
+
+
+
+                }
+                else if (scoreFolder[i] >= 50 && scoreFolder[i] <= 59)
+                {
+                    gradeUnitFolder.Add(3);
+                    gradeFolder.Add('C');
+                    point = 3 * courseUnitFolder[i];
+                    weightedPointFolder.Add(point);
+                    weightedPoint += point;
+                    grade += 3;
+                    remarkFolder.Add("Good");
+                }
+                else if (scoreFolder[i] >= 45 && scoreFolder[i] <= 49)
+                {
+                    gradeUnitFolder.Add(2);
+                    gradeFolder.Add('D');
+                    point = 2 * courseUnitFolder[i];
+                    weightedPointFolder.Add(point);
+                    weightedPoint += point;
+                    grade += 2;
+                    remarkFolder.Add("Fair");
+
+
+
+                }
+                else if (scoreFolder[i] >= 40 && scoreFolder[i] <= 44)
+                {
+                    gradeUnitFolder.Add(1);
+                    gradeFolder.Add('E');
+                    point = 1 * courseUnitFolder[i];
+                    weightedPointFolder.Add(point);
+                    weightedPoint += point;
+                    grade += 1;
+                    remarkFolder.Add("Pass");
+
+
+
+                }
+                else
+                {
+                    gradeUnitFolder.Add(0);
+                    gradeFolder.Add('F');
+                    point = 0 * courseUnitFolder[i];
+                    weightedPointFolder.Add(point);
+                    weightedPoint += point;
+                    grade += 0;
+                    remarkFolder.Add("Fail");
+                }
+            }
