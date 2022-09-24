@@ -44,3 +44,21 @@ namespace CGPACalculator
                     Console.WriteLine("Course does not exist!. Please try inputing the right course");
                 }
             }
+            for (int i = 0; i < numberOfCourses; i++)
+            {
+                Console.WriteLine("Kindly enter your course title: ");
+                course = Console.ReadLine();
+                Console.WriteLine("Kindly enter your course code: ");
+                courseCode = Console.ReadLine();
+                Console.WriteLine("Kindly enter your course unit: ");
+                courseUnit = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Kindly enter your course score: ");
+                score = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Kindly add the next course...");
+                Console.WriteLine();
+                courseFolder.Add(course);
+                courseCodeFolder.Add(courseCode);
+                courseUnitFolder.Add(courseUnit);
+                scoreFolder.Add(score);
+            }
+        }
