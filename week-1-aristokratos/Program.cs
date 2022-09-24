@@ -165,3 +165,35 @@ namespace CGPACalculator
                 result += "You are on Pass";
             }
         }
+        public void printStudentDetails()
+        {
+            Console.WriteLine("|--------------|------------|-------------|---------|--------------|----------------------|");
+            Console.WriteLine("|Course & Code |COURSE Unit |Grade  Unit  |Grade    |Weighted Point|  Remark |\t");
+            Console.WriteLine("|--------------|------------|-------------|---------|--------------|-----------------------|");
+            for (int i = 0; i < numberOfCourses; i++)
+            {
+                Console.WriteLine($"{courseFolder[i] + courseCodeFolder[i]}  \t| {courseUnitFolder[i]}  \t| {gradeUnitFolder[i]}  \t|{gradeFolder[i]}   \t|\t{weightedPointFolder[i]}    \t |\t{remarkFolder[i]} \t|");
+            }
+            Console.WriteLine("|--------------|------------|-------------|---------|--------------|-----------------------|");
+            Console.WriteLine($"Total Grade Unit Register is {grade}");
+            Console.WriteLine($"Total Grade Unit Passed is {grade}");
+            Console.WriteLine($"Total Weight Point is {weightedPoint}");
+            Console.WriteLine($"Your CGPA is {CGPA} to 2 decimal places");
+            Console.WriteLine($"{result}");
+
+
+            Console.WriteLine("Thank you for using the CGPA calculator, we hope to see you soon. Success!!!");
+        }
+        public static void Main()
+        {
+            CgpaCal program = new CgpaCal();
+            program.getStudentDetails();
+            program.processStudentDetails();
+            program.printStudentDetails();
+
+
+        }
+
+
+    }
+}
