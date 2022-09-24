@@ -142,3 +142,26 @@ namespace CGPACalculator
                     remarkFolder.Add("Fail");
                 }
             }
+            CGPA = weightedPoint / grade;
+            if (CGPA >= 4.50 && CGPA <= 5.00)
+            {
+                result += "You are on First Class Division";
+
+            }
+            else if (CGPA >= 3.50 && CGPA <= 4.49)
+            {
+                result += "You are on Second Class(Upper) Division";
+            }
+            else if (CGPA >= 2.50 && CGPA <= 3.49)
+            {
+                result += "You are on Second Class(Lower) Division";
+            }
+            else if (CGPA >= 1.49 && CGPA <= 2.49)
+            {
+                result += "You are on Third Class Division";
+            }
+            else
+            {
+                result += "You are on Pass";
+            }
+        }
