@@ -1,6 +1,6 @@
 # week-1-aristokratos
 week-1-aristokratos created by GitHub Classroom
-Author : Oluwatobiloba Onawale
+Author : Oluwatobiloba Onawale (.NET)
 Email : <oluwatobiloba.onawale@decagon.dev>
 github : <https://github.com/aristokratos>
 
@@ -17,4 +17,4 @@ This task is aimed at evaluating your understanding of programming with C# langu
 
 Challenge
 
-You are required to write a console application that models a Grade Point Average (GPA) calculator and prints the result
+You are required to write a console application that models a Grade Point Average (GPA) calculator and prints the result.
