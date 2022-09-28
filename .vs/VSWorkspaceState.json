@@ -3,6 +3,10 @@
     "",
     "\\week-1-aristokratos"
   ],
+<<<<<<< HEAD
   "SelectedNode": "\\week-1-aristokratos.sln",
+=======
+  "SelectedNode": "\\week-1-aristokratos\\Program.cs",
+>>>>>>> 4bd567daa24e68c37b5d097324210f334a8efa0f
   "PreviewInSolutionExplorer": false
 }
