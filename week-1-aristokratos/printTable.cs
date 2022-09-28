@@ -32,13 +32,13 @@ namespace week_1_aristokratos
                 Console.WriteLine("|--------------|------------|-------------|---------|--------------|----------------------|");
                 for (int i = 0; i < numberOfCourses; i++)
                 {
-                    Console.WriteLine($"{courseFolder[i] + courseCodeFolder[i]}  \t| {courseUnitFolder[i]}  \t| {gradeUnitFolder[i]}  \t|{gradeFolder[i]}   \t|\t{weightedPointFolder[i]}    \t |\t{remarkFolder[i]} \t|");
+                   Console.WriteLine($"\t| {courseFolder[i] + courseCodeFolder[i]}  \t| {courseUnitFolder[i]}  \t| {gradeUnitFolder[i]}  \t|{gradeFolder[i]}   \t|\t{weightedPointFolder[i]}    \t |\t{remarkFolder[i]} \t|");
                 }
-                Console.WriteLine("|--------------|------------|-------------|---------|--------------|-----------------------|");
+                Console.WriteLine("|--------------|------------|-------------|---------|--------------|----------------------|");
                 Console.WriteLine($"Total Grade Unit Register is {courseUnit}");
                 Console.WriteLine($"Total Grade Unit Passed is {grade}");
                 Console.WriteLine($"Total Weight Point is {weightedPoint}");
-                Console.WriteLine($"{userName}, your CGPA is {CGPA} to 2 decimal places");
+                Console.WriteLine($"Your CGPA is {CGPA} to 2 decimal places");
                 Console.WriteLine($"{result}");
 
 

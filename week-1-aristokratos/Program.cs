@@ -7,30 +7,10 @@
 // Email : <oluwatobiloba.onawale@decagon.dev>
 // github : <https://github.com/aristokratos>
 
-using week_1_aristokratos;
-
 namespace CGPACalculator
 {
     class CgpaCal
     {
-<<<<<<< HEAD
-       
-
-        public static void Main()
-        {
-
-            getStudentDetails  details = new getStudentDetails();
-            getStudentDetails process = new getStudentDetails();
-            getStudentDetails info = new getStudentDetails();
-            processResult calc = new processResult();
-            printTable cgpaTable = new printTable();
-            info.studentDetails();
-            calc.processStudentDetails();
-            cgpaTable.table();
-           
-
-
-=======
         int score, grade, point, courseUnit, numberOfCourses, weightedPoint;
         double CGPA;
         string courseCode;
@@ -45,55 +25,114 @@ namespace CGPACalculator
         List<int> courseUnitFolder = new List<int>();
         List<int> gradeUnitFolder = new List<int>();
         List<int> weightedPointFolder = new List<int>();
+
         public void getStudentDetails()
         {
+            Console.WriteLine("You are welcome to Aristokratos CGPA calculator");
+
+
             Console.WriteLine("Please enter your name");
             Console.ReadLine();
-            Console.WriteLine("You are welcome to Aristokratos CGPA calculator.");
             while (true)
             {
                 try
                 {
-                    Console.WriteLine("kindly add how many courses you took this semester.");
+                    Console.WriteLine("kindly add the number of courses you took this semester.");
+
                     numberOfCourses = Convert.ToInt32(Console.ReadLine());
-
-                    Console.WriteLine("Kindly enter your course title: ");
-                    course = Console.ReadLine();
-
-                    Console.WriteLine("Kindly enter your course code: ");
-                    courseCode = Console.ReadLine();
-
-                    Console.WriteLine("Kindly enter your course unit: ");
-                    courseUnit = Convert.ToInt32(Console.ReadLine());
-
-                    Console.WriteLine("Kindly enter your course score: ");
-                    score = Convert.ToInt32(Console.ReadLine());
-
-                    Console.WriteLine("Kindly add the next course...");
-                    Console.WriteLine();
-                    
                     if (course != null) { break; }
-                    else { Console.WriteLine("Course does not exist!. Please try inputing the right course!"); }
+                    else { Console.WriteLine("Course does not exist!. Please try inputing the right course"); }
                 }
                 catch
                 {
-                    Console.WriteLine("Course does not exist!. Please try inputing the right course!");
+                    Console.WriteLine("Course does not exist!. Please try inputing the right course");
                 }
             }
+
             for (int i = 0; i < numberOfCourses; i++)
             {
-               
+                Console.WriteLine("Kindly enter your course title: ");
+                course = Console.ReadLine();
+
+                while (true)
+                {
+                    try
+                    {
+
+                        Console.WriteLine("Kindly enter your course code: ");
+                        courseCode = Console.ReadLine();
+                        if (course != null) { break; }
+                        else { Console.WriteLine("Invalid input!. Please try inputing the correct course code"); }
+                    }
+                    catch
+                    {
+                        Console.WriteLine("Invalid input!. Please try inputing the correct course code");
+                    }
+                }
+
+
+
+                while (true)
+                {
+                    try
+                    {
+
+                        Console.WriteLine("Kindly enter your course unit: ");
+                        courseUnit = Convert.ToInt32(Console.ReadLine());
+                        if (course != null) { break; }
+                        else { Console.WriteLine("Invalid input!. Please try inputing the correct course unit"); }
+                    }
+                    catch
+                    {
+                        Console.WriteLine("Invalid input!. Please try inputing the correct course unit");
+                    }
+                }
+
+
+                while (true)
+                {
+                    try
+                    {
+
+                        Console.WriteLine("Kindly enter your course score: ");
+                        score = Convert.ToInt32(Console.ReadLine());
+                        if (course != null) { break; }
+                        else { Console.WriteLine("Invalid input!. Please try inputing the correct score"); }
+                    }
+                    catch
+                    {
+                        Console.WriteLine("Invalid input!. Please try inputing the correct score");
+                    }
+                }
+
+                Console.WriteLine("Kindly add the next course...");
+                Console.WriteLine();
+
+
+
                 courseFolder.Add(course);
                 courseCodeFolder.Add(courseCode);
                 courseUnitFolder.Add(courseUnit);
                 scoreFolder.Add(score);
             }
->>>>>>> 4bd567daa24e68c37b5d097324210f334a8efa0f
         }
+        public void processStudentDetails()
+        {
+            weightedPoint = 0;
+            grade = 0;
+            for (int i = 0; i < numberOfCourses; i++)
+            {
+                if (scoreFolder[i] >= 70 && scoreFolder[i] <= 100)
+                {
+                    gradeUnitFolder.Add(5);
+                    gradeFolder.Add('A');
+                    point = 5 * courseUnitFolder[i];
+                    weightedPointFolder.Add(point);
+                    weightedPoint += point;
+                    grade += 5;
+                    remarkFolder.Add("Excellent");
 
 
-<<<<<<< HEAD
-=======
 
 
                 }
@@ -148,6 +187,7 @@ namespace CGPACalculator
                 }
                 else
                 {
+
                     gradeUnitFolder.Add(0);
                     gradeFolder.Add('F');
                     point = 0 * courseUnitFolder[i];
@@ -155,6 +195,12 @@ namespace CGPACalculator
                     weightedPoint += point;
                     grade += 0;
                     remarkFolder.Add("Fail");
+
+
+
+
+
+
                 }
             }
             CGPA = weightedPoint / grade;
@@ -183,11 +229,11 @@ namespace CGPACalculator
         public void printStudentDetails()
         {
             Console.WriteLine("|--------------|------------|-------------|---------|--------------|----------------------|");
-            Console.WriteLine("|Course & Code |COURSE Unit |Grade  Unit  |Grade    |Weighted Point|  Remark |\t");
+            Console.WriteLine("|Course & Code |COURSE Unit |Grade  Unit  |Grade    |Weighted Point|  Remark |\t");
             Console.WriteLine("|--------------|------------|-------------|---------|--------------|-----------------------|");
             for (int i = 0; i < numberOfCourses; i++)
             {
-                Console.WriteLine($"{courseFolder[i] + courseCodeFolder[i]}  \t| {courseUnitFolder[i]}  \t| {gradeUnitFolder[i]}  \t|{gradeFolder[i]}   \t|\t{weightedPointFolder[i]}    \t |\t{remarkFolder[i]} \t|");
+                Console.WriteLine($"{courseFolder[i] + courseCodeFolder[i]}  \t| {courseUnitFolder[i]}  \t| {gradeUnitFolder[i]}  \t|{gradeFolder[i]}   \t|\t{weightedPointFolder[i]}    \t |\t{remarkFolder[i]} \t|");
             }
             Console.WriteLine("|--------------|------------|-------------|---------|--------------|-----------------------|");
             Console.WriteLine($"Total Grade Unit Register is {grade}");
@@ -210,6 +256,5 @@ namespace CGPACalculator
         }
 
 
->>>>>>> 4bd567daa24e68c37b5d097324210f334a8efa0f
     }
 }
